@@ -1,0 +1,7 @@
+LINK_IN_BIO
+    add nav bar
+    smooth hover transition
+    clean title
+    add move to right and text
+COMING SOON
+    make it lmao
