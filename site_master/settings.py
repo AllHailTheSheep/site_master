@@ -23,6 +23,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 from secrets import secret_key
 SECRET_KEY = secret_key
 
+ALLOWED_HOSTS = ['0.0.0.0',
+                 '127.0.0.1',
+                 'benfasick.com',
+                 '134.122.23.23',]
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -116,6 +120,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 STATIC_ROOT = 'static'
 
