@@ -23,11 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 import os
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 
-ALLOWED_HOSTS = ['0.0.0.0',
-                 '127.0.0.1',
-                 'benfasick.com',
-                 '134.122.23.23',
-                 'benfasick.heroku.com',
+ALLOWED_HOSTS = ['*',
                  ]
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
