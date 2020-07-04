@@ -1,1 +1,1 @@
-web: pip install gunicorn & gunicorn site_master.wsgi & wait -n --log-file -
+web: pip install gunicorn & wait -n & gunicorn site_master.wsgi --log-file -
