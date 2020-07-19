@@ -15,11 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-import link_in_bio.views as libv
+import misc.views as misc_view
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('link_in_bio/', libv.index)
+    path('link_in_bio/', misc_views.index)
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
