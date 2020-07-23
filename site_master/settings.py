@@ -23,8 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 import os
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 
-ALLOWED_HOSTS = ['*',
-                 ]
+ALLOWED_HOSTS = ['*',]
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
@@ -36,7 +35,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'link_in_bio',
+    'misc',
 ]
 
 MIDDLEWARE = [
@@ -59,7 +58,7 @@ ROOT_URLCONF = 'site_master.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')]
+        'DIRS': [os.path.join(BASE_DIR, 'static')]
         ,
         'APP_DIRS': True,
         'OPTIONS': {
@@ -126,7 +125,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 # The absolute path to the directory where collectstatic will collect static files for deployment.
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, "assets")
+
+STATICFILES_DIRS = (
+  os.path.join(BASE_DIR, 'static/'),
+)
 
 # The URL to use when referring to static files (where they will be served from)
 STATIC_URL = '/static/'

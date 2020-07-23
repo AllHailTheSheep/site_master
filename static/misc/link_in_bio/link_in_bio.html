@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="{% static "global/main.css" %}">
+    <link rel="stylesheet" href="{% static "misc/link_in_bio/custom.css" %}">
+    <script src="{% static "global/main.js" %}"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Guntur:wght@600&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>Links - BenFasick.com</title>
+</head>
+
+
+<body>
+    <div id="sidebar" class="sidebar">
+
+        <a class="closebtn" onclick="closeSidebar()">&times;</a>
+        <a href="#">the menu will go here</a>
+    </div>
+
+    <div id="main">
+        <div class="w3-display-container">
+            <div class="w3-display-top, w3-display-container, header">
+                <h1 class="w3-hind-guntur" style="text-align: center; color: #69F0AE;">Links</h1>
+                <div class="w3-display-left" style="padding-bottom: .18em">
+                    <img onclick="openSidebar()" src=https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/list.svg width="32px" height="32px" alt="sidebar">
+                </div>
+            </div>
+            <div class="content">
+                <div class="w3-container">
+                    <div class="w3-panel" style="padding: 0.06em">
+                        <button class="block" type="button" title="Black Lives Matter" onclick="window.open('https://blacklivesmatter.com')"> <img src="{% static "/misc/link_in_bio/blm_logo.png" %}" alt="blm logo" style="max-height: 7em"> </button>
+                    </div>
+                </div>
+                <div class="w3-container">
+                    <div class="w3-panel" style="padding: 0.06em">
+                        <button class="block" type="button" title="My GitHub" onclick="window.open('https://github.com/AllHailTheSheep')"> <img src="{% static "/misc/link_in_bio/github_logo.png" %}" alt="github logo" style="max-height: 7em"> </button>
+                    </div>
+                </div>
+                <div class="w3-containermartor">
+                    <div class="w3-panel" style="padding: 0.06em">
+                        <button class="block" type="button" title="My Twitter" onclick="window.open('https://twitter.com/BenFasick')"> <img src="{% static "/misc/link_in_bio/twitter_logo.png" %}" alt="twitter logo" style="max-height: 5em"> </button>
+                    </div>
+                </div>
+                <div class="w3-container">
+                    <div class="w3-panel" style="padding: 0.06em">
+                        <button class="block" type="button" title="My Instagram" onclick="window.open('https://instagram.com/BenFasick')"> <img src="{% static "/misc/link_in_bio/insta_logo.png" %}" alt="instagram logo" style="max-height: 6em"> </button>
+                    </div>
+                </div>
+                <div class="w3-container">
+                    <div class="w3-panel" style="padding: 0.06em">
+                        <button class="block" type="button" title="The Code Lab" onclick="window.open('https://discord.gg/EGgRkwj')"> <img src="{% static "/misc/link_in_bio/discord_logo.png" %}" alt="discord logo" style="max-height: 7em"> </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body></html>
