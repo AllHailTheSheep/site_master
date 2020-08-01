@@ -1,0 +1,22 @@
+.w3-hind-guntur {
+  font-family: 'Hind Guntur', sans-serif;
+}
+
+.w3-roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+.block {
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+  text-align: center;
+}
+
+.block:hover {
+  opacity: 0.5;
+  transition-duration: 0.5s;
+  /*transform: translateX(-3em);*/
+}
