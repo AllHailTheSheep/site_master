@@ -3,7 +3,15 @@ body {
     background-repeat: repeat;
 }
 
-.hidden {display:none;}
+.menubtn {
+    opacity: 1;
+    transition: 0.5s;}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
 
 /* The side navigation menu */
 .sidebar {
