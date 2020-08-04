@@ -3,13 +3,14 @@
 
 <head>
     {% load static %}
+    <!-- {% load static %} -->
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="{% static "global/main.css" %}">
-    <link rel="stylesheet" href="{% static "misc/link_in_bio/custom.css" %}">
-    <script src="{% static "global/main.js" %}"></script>
+    <link rel="stylesheet" href="{% static "/global/main.css"%}"> <!-- {% static "/global/main.css"%} -->
+    <link rel="stylesheet" href="{% static "/misc/link_in_bio/custom.css"%}"> <!-- {% static "/misc/link_in_bio/main.js"%} -->
+    <script src="{% static "global/main.js" %}"></script> <!-- {% static "global/main.js" %} -->
     <link href="https://fonts.googleapis.com/css2?family=Hind+Guntur:wght@600&family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <title>Links - BenFasick.com</title>
+    <title>Links</title>
 </head>
 
 
@@ -47,6 +48,11 @@
                 <div class="w3-container">
                     <div class="w3-panel" style="padding: 0.06em">
                         <button class="block" type="button" title="My Instagram" onclick="window.open('https://instagram.com/BenFasick')"> <img src="{% static "/misc/link_in_bio/insta_logo.png" %}" alt="instagram logo" style="max-height: 6em"> </button>
+                    </div>
+                </div>
+                <div class="w3-container">
+                    <div class="w3-panel" style="padding: 0.06em">
+                        <button class="block" type="button" title="My Spotify" onclick="window.open('https://open.spotify.com/user/21fasickb?si=xvRpOIqTQEO7VOIHaNs9DA')"> <img src="{% static "/misc/link_in_bio/spotify_logo.png" %}" alt="spotify logo" style="max-height: 7em"> </button>
                     </div>
                 </div>
                 <div class="w3-container">

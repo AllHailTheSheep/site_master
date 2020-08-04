@@ -51,8 +51,7 @@ MIDDLEWARE = [
 
 # Force secure ssl
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-SECURE_SSL_REDIRECT = False # True
-
+SECURE_SSL_REDIRECT = False #True
 ROOT_URLCONF = 'site_master.urls'
 
 TEMPLATES = [

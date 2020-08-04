@@ -24,5 +24,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('link_in_bio/', misc_views.index)  
 ]
+
 handler404 = 'misc.views.handler404'
 handler500 = 'misc.views.handler500'
