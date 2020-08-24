@@ -3,11 +3,14 @@
 
 <head>
     {% load static %}
-    <!-- {% load static %} -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static "/global/favicon/apple-touch-icon.png" %}">  
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static "/global/favicon/favicon-32x32.png" %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static "/global/favicon/favicon-16x16.png" %}">
+    <link rel="manifest" href="{% static "/global/favicon/site.webmanifest"%}">
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="{% static "/global/main.css"%}"> <!-- {% static "/global/main.css"%} -->
-    <script src="{% static "/global/main.js"%}"></script> <!-- {% static "/global/main.js"%} -->
+    <link rel="stylesheet" href="{% static "/global/main.css"%}">
+    <script src="{% static "/global/main.js"%}"></script>
     <link href="https://fonts.googleapis.com/css2?family=Hind+Guntur:wght@600&family=Roboto:wght@300&display=swap" rel="stylesheet">
     <title>Error 404</title>
 </head>
@@ -17,7 +20,7 @@
     <div id="sidebar" class="sidebar">
 
         <a class="closebtn" onclick="closeSidebar()">&times;</a>
-        <a href="/link_in_bio">Links</a>
+        <a href="/link_in_bio/">Links</a>
 
     </div>
 

@@ -21,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 import os
-SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
+SECRET_KEY = "asdfjgawefasdFASIEPHFADIHPF 213984620397rghqliwgefasd fAUHLJJASDFHAWE$IF BASD?OFI?YAW F" # os.environ.get('DJANGO_SECRET_KEY')
 
 ALLOWED_HOSTS = ['*',]
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -51,7 +51,7 @@ MIDDLEWARE = [
 
 # Force secure ssl
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-SECURE_SSL_REDIRECT = True
+SECURE_SSL_REDIRECT =  False # True
 ROOT_URLCONF = 'site_master.urls'
 
 TEMPLATES = [

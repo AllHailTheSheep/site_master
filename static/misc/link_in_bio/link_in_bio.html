@@ -3,12 +3,15 @@
 
 <head>
     {% load static %}
-    <!-- {% load static %} -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static "/global/favicon/apple-touch-icon.png" %}">  
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static "/global/favicon/favicon-32x32.png" %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static "/global/favicon/favicon-16x16.png" %}">
+    <link rel="manifest" href="{% static "/global/favicon/site.webmanifest"%}">
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="{% static "/global/main.css"%}"> <!-- {% static "/global/main.css"%} -->
-    <link rel="stylesheet" href="{% static "/misc/link_in_bio/custom.css"%}"> <!-- {% static "/misc/link_in_bio/main.js"%} -->
-    <script src="{% static "global/main.js" %}"></script> <!-- {% static "global/main.js" %} -->
+    <link rel="stylesheet" href="{% static "/global/main.css"%}">
+    <link rel="stylesheet" href="{% static "/misc/link_in_bio/custom.css"%}">
+    <script src="{% static "global/main.js" %}"></script>
     <link href="https://fonts.googleapis.com/css2?family=Hind+Guntur:wght@600&family=Roboto:wght@300&display=swap" rel="stylesheet">
     <title>Links</title>
 </head>
@@ -30,6 +33,7 @@
                 </div>
             </div>
             <div class="content">
+            <div id="space" style="padding: 1em"></div>
                 <div class="w3-container">
                     <div class="w3-panel" style="padding: 0.06em">
                         <button class="block" type="button" title="Black Lives Matter" onclick="window.open('https://blacklivesmatter.com')"> <img src="{% static "/misc/link_in_bio/blm_logo.png" %}" alt="blm logo" style="max-height: 7em"> </button>
