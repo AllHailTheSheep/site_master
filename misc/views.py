@@ -3,12 +3,8 @@ from django.http import FileResponse
 
 
 # Create your views here.
-def index(request):
-    return render(None, 'misc/link_in_bio/link_in_bio.html')
-
-
-# Imports
-from django.template import RequestContext
+def index(request, template_name="misc/link_in_bio/link_in_bio.html"):
+    return render(request, template_name)
 
 
 def handler404(request, template_name="misc/errors/404-500.html"):

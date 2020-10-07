@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    {% load static %}
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static "/global/favicon/apple-touch-icon.png" %}">  
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static "/global/favicon/favicon-32x32.png" %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static "/global/favicon/favicon-16x16.png" %}">
+    <link rel="manifest" href="{% static "/global/favicon/site.webmanifest"%}">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="{% static "/global/main.css"%}">
+    <script src="{% static "global/main.js" %}"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Guntur:wght@600&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    {% block custom_scripts %}
+    {% endblock custom_scripts %}
+</head>
+
+
+
+<body>
+    <div id="sidebar" class="sidebar">
+        <a class="closebtn" onclick="closeSidebar()">&times;</a>
+        <a href="#">the menu will go here</a>
+    </div>
+
+    <div id="main">
+        <div class="w3-display-container">
+            <div class="w3-display-top, w3-display-container, header">
+                <h1 class="w3-hind-guntur" style="text-align: center; color: #69F0AE;">{% block header %} {% endblock header %}</h1>
+                <div class="w3-display-left" style="padding-bottom: .18em">
+                    <img class="menubtn" id="menubtn" onclick="openSidebar()" src=https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/list.svg width="32px" height="32px" alt="sidebar">
+                </div>
+            </div>
+        {% block content %}
+        {% endblock content %}
+        </div>
+    </div>
+</body></html>
