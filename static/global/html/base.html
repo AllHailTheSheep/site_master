@@ -14,7 +14,7 @@
     <script src="{% static "global/main.js" %}"></script>
     <link href="https://fonts.googleapis.com/css2?family=Hind+Guntur:wght@600&family=Roboto:wght@300&display=swap" rel="stylesheet">
     {% block custom_scripts %}{% endblock custom_scripts %}
-    {% block title %}{% endblock title %}
+    <title>{% block title %}{% endblock title %}</title>
 </head>
 
 
