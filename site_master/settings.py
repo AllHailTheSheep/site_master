@@ -21,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 import os
-SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
+SECRET_KEY =  "sdfhjehsdfhsdf super secret" # os.environ.get('DJANGO_SECRET_KEY')
 
 ALLOWED_HOSTS = ['*',]
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -50,8 +50,16 @@ MIDDLEWARE = [
 ]
 
 # Force secure ssl
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-SECURE_SSL_REDIRECT =  True
+SESSION_COOKIE_SECURE = False
+CSRF_COOKIE_SECURE = False
+SECURE_SSL_REDIRECT = False
+
+
+# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+# SESSION_COOKIE_SECURE = True
+# CSRF_COOKIE_SECURE = True
+# SECURE_SSL_REDIRECT =  True
+
 ROOT_URLCONF = 'site_master.urls'
 
 TEMPLATES = [
@@ -126,9 +134,7 @@ USE_TZ = True
 # The absolute path to the directory where collectstatic will collect static files for deployment.
 STATIC_ROOT = os.path.join(BASE_DIR, "assets")
 
-STATICFILES_DIRS = (
-  os.path.join(BASE_DIR, 'static/'),
-)
+STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 
 # The URL to use when referring to static files (where they will be served from)
 STATIC_URL = '/static/'
