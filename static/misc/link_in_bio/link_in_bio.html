@@ -10,43 +10,18 @@
 {% block header %}Links{% endblock header %}
 
 {% block content %}
-<div class="content">
-    <div id="space" style="padding: 1em"></div>
-        <div class="w3-container">
-            <div class="w3-panel" style="padding: 0.06em">
-                <button class="block" type="button" title="Black Lives Matter" onclick="window.open('https://blacklivesmatter.com')"> <img src="{% static "/misc/link_in_bio/blm_logo.png" %}" alt="blm logo" style="max-height: 7em"> </button>
-            </div>
-        </div>
-        <div class="w3-container">
-            <div class="w3-panel" style="padding: 0.06em">
-                <button class="block" type="button" title="My GitHub" onclick="window.open('https://github.com/AllHailTheSheep')"> <img src="{% static "/misc/link_in_bio/github_logo.png" %}" alt="github logo" style="max-height: 7em"> </button>
-            </div>
-        </div>
-        <div class="w3-containermartor">
-            <div class="w3-panel" style="padding: 0.06em">
-                <button class="block" type="button" title="My Twitter" onclick="window.open('https://twitter.com/BenFasick')"> <img src="{% static "/misc/link_in_bio/twitter_logo.png" %}" alt="twitter logo" style="max-height: 5em"> </button>
-            </div>
-        </div>
-        <div class="w3-container">
-            <div class="w3-panel" style="padding: 0.06em">
-                <button class="block" type="button" title="My Instagram" onclick="window.open('https://instagram.com/BenFasick')"> <img src="{% static "/misc/link_in_bio/insta_logo.png" %}" alt="instagram logo" style="max-height: 6em"> </button>
-            </div>
-        </div>
-        <div class="w3-container">
-            <div class="w3-panel" style="padding: 0.06em">
-                <button class="block" type="button" title="My Spotify" onclick="window.open('https://open.spotify.com/user/21fasickb?si=xvRpOIqTQEO7VOIHaNs9DA')"> <img src="{% static "/misc/link_in_bio/spotify_logo.png" %}" alt="spotify logo" style="max-height: 6em"> </button>
-            </div>
-        </div>
-        <div class="w3-container">
-            <div class="w3-panel" style="padding: 0.06em">
-                <button class="block" type="button" title="The Code Lab" onclick="window.open('https://discord.gg/EGgRkwj')"> <img src="{% static "/misc/link_in_bio/discord_logo.png" %}" alt="discord logo" style="max-height: 7em"> </button>
-            </div>
-        </div>
-        <div class="w3-container">
-            <div class="w3-panel" style="padding: 0.06em">
-                <button class="block" type="button" title="My Onlyfans" onclick="window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ')"> <img src="{% static "/misc/link_in_bio/onlyfans_logo.png" %}" alt="onlyfans logo" style="max-height: 7em"> </button>
-            </div>
+<div id='space' style='padding: 1em'>
+{% for link in links %}
+<div id="space">
+    <div class="w3-container">
+        <div class="w3-panel" style="padding: 0.06em">
+            <button class="block" type="button" title="{{link.title}}" onclick="window.open('{{link.dest}}')">
+                <img src="../{{link.image}}" alt="{{link.alt}}" style="max-height: 7em">
+            </button>
         </div>
     </div>
 </div>
+{% endfor %}
+
+
 {% endblock content %}

@@ -20,6 +20,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.conf.urls import handler404
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('link_in_bio/', misc_views.index)  
