@@ -1,5 +1,3 @@
-
-/* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
 function openSidebar() {
     "use strict";
     document.getElementById("sidebar").style.width = "15.63em";
@@ -9,7 +7,6 @@ function openSidebar() {
 }
 /* exported openSidebar */
 
-/* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
 function closeSidebar() {
     "use strict";
     document.getElementById("sidebar").style.width = "0";

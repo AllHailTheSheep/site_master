@@ -1,43 +1,50 @@
+/* body stuff */
 body {
+    min-height: 100vh;
+    position: relative;
     background-image: url("dark-texture.png");
     background-repeat: repeat;
 }
 
-.menubtn {
-    opacity: 1;
-    transition: 0.5s;}
+/* menu stuff */
 
+/* this class is the default button */
+.sidebarbtn {
+    position: absolute;
+    margin-top: .3em;
+    top: 0;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+/* switch above with this one on click */
 .hidden {
+    position: absolute;
+    margin-top: .3em;
+    top: 0;
+    opacity: 1;
+    transition: 0.5s;
     visibility: hidden;
     opacity: 0;
     transition: 0.5s;
 }
 
-/* The side navigation menu */
+/* the sidebar */
 .sidebar {
     height: 100%;
-    /* 100% Full-height */
     width: 0;
-    /* 0 width - change this with JavaScript */
     position: fixed;
-    /* Stay in place */
     z-index: 1;
-    /* Stay on top */
     top: 0;
-    /* Stay at the top */
     left: 0;
     background-image: url("dark-texture.png");
     background-repeat: repeat;
-    /* Black*/
     overflow-x: hidden;
-    /* Disable horizontal scroll */
     padding-top: 3.75em;
-    /* Place content 60px from the top */
     transition: 0.5s;
-    /* 0.5 second transition effect to slide in the sidebar */
 }
 
-/* The navigation menu links */
+/* the sidebar links */
 .sidebar a {
     padding: 0.5em 0.5em 0.5em 2em;
     text-decoration: none;
@@ -47,47 +54,209 @@ body {
     transition: 0.3s;
 }
 
-/* When you mouse over the navigation links, change their color */
 .sidebar a:hover {
     color: #f1f1f1;
 }
 
-/* Position and style the close button (top right corner) */
+/* the close button in sidebar */
 .sidebar .closebtn {
     position: absolute;
     top: 0;
-    right: .56enm;
+    right: .56em;
     font-size: 2.25em;
     margin-left: 4.13em;
 }
 
+
+/* contains title and sidebarbtn */
 .header {
-    height: 50px;
+    height: 3em;
 }
 
+/* the content from each specifc html (not base) */
 .content {
-    position: absolute;
-    top: 50px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    overflow-y: visible;
+    position: relative;
 }
 
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+/* the actual body */
 #main {
     transition: margin-left .5s;
-    padding: 1.25em;
-    padding-bottom: 3em;
+    padding-top: .8em;
+    padding-left: 1.25em;
 }
-#footer {
-    position: absolute;
-    bottom: 3;
-    width: 100%;
-    height: 3em;            /* Footer height */
-  }
 
-/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+
+/* footer stuff */
+
+footer {
+    height: 17em;
+    margin: auto;
+}
+
+.grid-container {
+    margin: inherit;
+    width: 97%;
+    border-radius: 2em;
+    padding-top: 1em;
+    border-width:0;
+    background-color:rgba(20, 20, 20, 0.4);
+    justify-content: center;
+    justify-items: center;
+    display: grid;
+    grid-template-columns: 22em 22em 22em;
+    grid-template-rows: 4em 3em 3em 3em 5em;
+    gap: 0px 0px;
+    grid-template-areas:
+      "about-me learn-to-code contact-me"
+      "my-cv python my-number"
+      "site-map html email-me"
+      "tech-stack demos null"
+      "small-things small-things small-things";
+    }
+    a:link {
+        text-decoration: none;
+    }
+      
+    a:visited {
+        text-decoration: none;
+    }
+      
+    a:hover {
+        text-decoration: underline;
+    }
+      
+    a:active {
+        text-decoration: underline;
+    }
+  
+    .about-me { 
+        grid-area: about-me;
+        align-self: center; 
+        font-size: 1.5em;
+        font-family: 'Courier New', Courier, monospace;
+        color: #69F0AE;
+    }
+  
+    .learn-to-code { 
+        grid-area: learn-to-code;
+        align-self: center; 
+        font-size: 1.5em;
+        font-family: 'Courier New', Courier, monospace;
+        color: #69F0AE;
+    }
+  
+    .contact-me { 
+        grid-area: contact-me;
+        align-self: center; 
+        font-size: 1.5em;
+        font-family: 'Courier New', Courier, monospace;
+        color: #69F0AE;
+    }
+  
+    .my-cv { 
+        grid-area: my-cv;
+        align-self: center; 
+        font-size: 1em;
+        font-family: 'Courier New', Courier, monospace;
+        color: #69F0AE;
+    }
+  
+    .site-map { 
+        grid-area: site-map;
+        align-self: center; 
+        font-size: 1em;
+        font-family: 'Courier New', Courier, monospace;
+        color: #69F0AE;
+    }
+  
+    .tech-stack { 
+        grid-area: tech-stack;
+        align-self: center; 
+        font-size: 1em;
+        font-family: 'Courier New', Courier, monospace;
+        color: #69F0AE;
+    }
+  
+    .python { 
+        grid-area: python;
+        align-self: center; 
+        font-size: 1em;
+        font-family: 'Courier New', Courier, monospace;
+        color: #69F0AE;
+    }
+  
+    .demos { 
+        grid-area: demos;
+        align-self: center; 
+        font-size: 1em;
+        font-family: 'Courier New', Courier, monospace;
+        color: #69F0AE;
+    }
+  
+    .html { 
+        grid-area: html;
+        align-self: center;
+        font-size: 1em;
+        font-family: 'Courier New', Courier, monospace;
+        color: #69F0AE;
+    }
+  
+    .my-number { 
+        grid-area: my-number;
+        align-self: center; 
+        font-size: 1em;
+        font-family: 'Courier New', Courier, monospace;
+        color: #69F0AE;
+    }
+  
+    .email-me { 
+        grid-area: email-me;
+        align-self: center;
+        font-size: 1em;
+        font-family: 'Courier New', Courier, monospace;
+        color: #69F0AE;
+    }
+  
+    .null { 
+        grid-area: null;
+    }
+  
+    .small-things { 
+        grid-area: small-things;
+        align-self: center; 
+        font-size: 1em;
+        font-family: 'Courier New', Courier, monospace;
+        color: #69F0AE;
+        display: grid;
+        justify-content: center;
+        justify-items: center;
+        grid-template-columns: 22em 22em 22em;
+        grid-template-rows: .75em 4em;
+        gap: 0px 0px;
+        grid-template-areas: 
+        "null2 null2 null2"
+        "made-with-love made-with-love made-with-love";
+      grid-area: small-things;
+    }
+    .null2 { 
+        grid-area: null2; 
+    }
+    .made-with-love { 
+        grid-area: made-with-love; 
+        align-self: center;
+        font-size: .75em;
+        font-family: 'Courier New', Courier, monospace;
+        color: #69F0AE;
+    }
+    
+  
+
+
+
+
+
+
+/* for smol screens */
 @media screen and (max-height: 600px) {
     .sidebar {
         padding-top: 0.94em;
