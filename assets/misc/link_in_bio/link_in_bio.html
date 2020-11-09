@@ -11,17 +11,18 @@
 
 {% block content %}
 <div id='space' style='padding: 1em'>
-{% for link in links %}
-<div id="space">
-    <div class="w3-container">
-        <div class="w3-panel" style="padding: 0.06em">
-            <button class="block" type="button" title="{{link.title}}" onclick="window.open('{{link.dest}}')">
-                <img src="../{{link.image}}" alt="{{link.alt}}" style="max-height: 7em">
-            </button>
+    {% for link in links %}
+    <div id="space">
+        <div class="w3-container">
+            <div class="w3-panel" style="padding: 0.06em">
+                <button class="block" type="button" title="{{link.title}}" onclick="window.open('{{link.dest}}')">
+                    <img src="../{{link.image}}" alt="{{link.alt}}" style="max-height: 7em">
+                </button>
+            </div>
         </div>
     </div>
+    {% endfor %}
 </div>
-{% endfor %}
 
 
 {% endblock content %}
